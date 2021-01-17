@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRevealLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ib_item_work_delete"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#F3F3F3"
+                android:gravity="center"
+                android:src="@drawable/baseline_delete_black_24dp" />
+            <ImageButton
+                android:id="@+id/ib_item_work_update"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#EDEDED"
+                android:gravity="center"
+                android:src="@drawable/baseline_upgrade_black_24dp" />
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:id="@+id/cb_item_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_item_date"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="#4CAF50"
+                android:gravity="center"
+                android:text="Day"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cb_item_work"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.157" />
+
+            <TextView
+                android:id="@+id/tv_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="title"
+                app:layout_constraintStart_toEndOf="@+id/tv_item_date"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_item_punish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Phạt"
+                app:layout_constraintStart_toEndOf="@+id/tv_item_title"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_item_shifts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Ca làm:"
+                app:layout_constraintStart_toEndOf="@+id/tv_item_date"
+                app:layout_constraintTop_toBottomOf="@+id/tv_item_title" />
+
+            <TextView
+                android:id="@+id/tv_item_sum_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Tổng thời gian"
+                app:layout_constraintStart_toEndOf="@+id/tv_item_date"
+                app:layout_constraintTop_toBottomOf="@+id/tv_item_shifts" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>
