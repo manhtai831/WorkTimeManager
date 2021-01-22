@@ -19,6 +19,7 @@
             android:id="@+id/edt_tme_afternoon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:hint="Thời gian làm ca chiều" />
     </com.google.android.material.textfield.TextInputLayout>
 
